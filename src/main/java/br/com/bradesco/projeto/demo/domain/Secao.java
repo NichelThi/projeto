@@ -20,6 +20,7 @@ public class Secao {
     private Juncao juncao;
 
     @OneToMany(mappedBy = "secao")
+    @JsonIgnoreProperties("secao")
      private List<Funcionario> funcionario;
 
 
