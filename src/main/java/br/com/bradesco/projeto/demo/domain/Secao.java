@@ -1,6 +1,7 @@
 package br.com.bradesco.projeto.demo.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import net.bytebuddy.dynamic.loading.InjectionClassLoader;
 
 import javax.persistence.*;
 import java.util.List;
@@ -9,6 +10,7 @@ import java.util.List;
 @Entity
 public class Secao {
 
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Id
     private Long id;
     private String nome;
@@ -17,7 +19,7 @@ public class Secao {
     @ManyToOne
     private Juncao juncao;
 
-    @OneToMany
+    @OneToMany(mappedBy = "secao")
      private List<Funcionario> funcionario;
 
 
@@ -51,5 +53,13 @@ public class Secao {
 
     public void setJuncao(Juncao juncao) {
         this.juncao = juncao;
+    }
+
+    public List<Funcionario> getFuncionario() {
+        return funcionario;
+    }
+
+    public void setFuncionario(List<Funcionario> funcionario) {
+        this.funcionario = funcionario;
     }
 }
