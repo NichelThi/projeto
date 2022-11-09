@@ -14,11 +14,7 @@ public class Secao {
     private String nome;
     private Long codigo;
 
-    @OneToOne(cascade = CascadeType.PERSIST)
-    private Funcionario gestor;
-
     @ManyToOne
-    @JoinColumn(name = "juncao_id")
     private Juncao juncao;
 
     @OneToMany
@@ -55,13 +51,5 @@ public class Secao {
 
     public void setJuncao(Juncao juncao) {
         this.juncao = juncao;
-    }
-
-    public Funcionario getGestor() {
-        return gestor;
-    }
-
-    public void setGestor(Funcionario gestor) {
-        this.gestor = gestor;
     }
 }
