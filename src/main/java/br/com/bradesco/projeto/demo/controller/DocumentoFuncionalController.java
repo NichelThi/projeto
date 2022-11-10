@@ -3,12 +3,6 @@ package br.com.bradesco.projeto.demo.controller;
 import br.com.bradesco.projeto.demo.domain.*;
 import br.com.bradesco.projeto.demo.service.*;
 import org.springframework.web.bind.annotation.*;
-import br.com.bradesco.projeto.demo.domain.Funcionario;
-import br.com.bradesco.projeto.demo.service.FuncionarioService;
-import org.springframework.web.bind.annotation.*;
-import br.com.bradesco.projeto.demo.domain.Juncao;
-import br.com.bradesco.projeto.demo.service.JuncaoService;
-import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 

@@ -2,7 +2,6 @@ package br.com.bradesco.projeto.demo.service;
 
 
 import br.com.bradesco.projeto.demo.domain.Funcionario;
-import br.com.bradesco.projeto.demo.domain.Juncao;
 import br.com.bradesco.projeto.demo.domain.Secao;
 import br.com.bradesco.projeto.demo.repository.FuncionarioRepository;
 import br.com.bradesco.projeto.demo.repository.SecaoRepository;

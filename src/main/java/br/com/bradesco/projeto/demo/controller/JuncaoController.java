@@ -1,9 +1,7 @@
 package br.com.bradesco.projeto.demo.controller;
 
 import br.com.bradesco.projeto.demo.domain.Juncao;
-import br.com.bradesco.projeto.demo.domain.Secao;
 import br.com.bradesco.projeto.demo.service.JuncaoService;
-import br.com.bradesco.projeto.demo.service.SecaoService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
