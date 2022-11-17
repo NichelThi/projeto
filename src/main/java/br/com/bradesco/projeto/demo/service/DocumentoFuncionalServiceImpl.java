@@ -26,13 +26,8 @@ public class DocumentoFuncionalServiceImpl implements DocumentoFuncionalService 
         return IterableUtils.toList(documentoFuncionalRepository.findAll());
     }
 
-    public DocumentoFuncional save(DocumentoFuncional documentoFuncional, Documento documento) {
-        if (documento.getAnexo() == null){
+    public DocumentoFuncional save(DocumentoFuncional documentoFuncional) {
             return documentoFuncionalRepository.save(documentoFuncional);
-        }else{
-            return
-        }
-
     }
 
 
