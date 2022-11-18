@@ -53,15 +53,15 @@ public class DocumentoFuncional {
 
     public void setFuncionario(String funcionario) {
         this.funcionario = funcionario;
-    }
+    }*/
 
 
-    public String getDocumento() {
+    public List<Documento> getDocumento() {
         return documento;
     }
 
-    public void setDocumento(String documento) {
+    public void setDocumento(List <Documento> documento) {
         this.documento = documento;
-    }*/
+    }
 
 }

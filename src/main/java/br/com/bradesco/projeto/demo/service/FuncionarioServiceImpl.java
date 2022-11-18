@@ -3,6 +3,7 @@ package br.com.bradesco.projeto.demo.service;
 
 import br.com.bradesco.projeto.demo.domain.Funcionario;
 import br.com.bradesco.projeto.demo.domain.Secao;
+import br.com.bradesco.projeto.demo.exception.FuncionarioIncompleto;
 import br.com.bradesco.projeto.demo.repository.FuncionarioRepository;
 import br.com.bradesco.projeto.demo.repository.SecaoRepository;
 import lombok.RequiredArgsConstructor;
@@ -27,9 +28,15 @@ public class FuncionarioServiceImpl  implements FuncionarioService{
 
     @Override
     public Funcionario save(Funcionario funcionario) {
-        Secao secao = secaoRepository.findById(funcionario.getSecao().getId()).get();
-        funcionario.setSecao(secao);
-        return funcionarioRepository.save(funcionario);
+        if(funcionario.getFuncional() == null || funcionario.getNome().isEmpty() || funcionario.getSecao() == null)
+        {
+            throw new FuncionarioIncompleto();
+        }
+        else {
+            Secao secao = secaoRepository.findById(funcionario.getSecao().getId()).get();
+            funcionario.setSecao(secao);
+            return funcionarioRepository.save(funcionario);
+        }
     }
 
     @Override

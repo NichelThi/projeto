@@ -20,7 +20,7 @@ public class FuncionarioController {
         }
 
         @GetMapping("{id}")
-        Funcionario getById(@PathVariable Long funcional) {
+        Funcionario getById(@PathVariable("id") Long funcional) {
             return funcionarioService.getById(funcional);
         }
 

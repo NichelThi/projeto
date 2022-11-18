@@ -17,8 +17,7 @@ import java.util.List;
 
 public class DocumentoFuncionalServiceImpl implements DocumentoFuncionalService {
     private final DocumentoFuncionalRepository documentoFuncionalRepository;
-    private final DocumentoRepository documentoRepository;
-    private final AnexoNotFound anexoNotFound;
+
     private List<DocumentoFuncional> list = new ArrayList<>();
 
     @Override
@@ -27,7 +26,11 @@ public class DocumentoFuncionalServiceImpl implements DocumentoFuncionalService 
     }
 
     public DocumentoFuncional save(DocumentoFuncional documentoFuncional) {
+        if (documentoFuncional.getDocumento() == null || documentoFuncional.getDocumento().isEmpty() ){
+            throw new AnexoNotFound();
+        }else{
             return documentoFuncionalRepository.save(documentoFuncional);
+        }
     }
 
 

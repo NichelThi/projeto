@@ -15,7 +15,7 @@ public class Documento {
 
     @ManyToMany(mappedBy = "documento")
     @JsonIgnoreProperties("documento")
-    private List<DocumentoFuncional> documentoFuncional;
+    private List<DocumentoFuncional> documentoFuncional;// ajustar nao faz sentido
     @Id
     private Long id;
     private String anexo;
