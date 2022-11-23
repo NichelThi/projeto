@@ -1,6 +1,7 @@
 package br.com.bradesco.projeto.demo.controller;
 
 
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import br.com.bradesco.projeto.demo.domain.*;
 import br.com.bradesco.projeto.demo.service.*;
@@ -30,7 +31,7 @@ public class DocumentoController {
         }
 
         @PostMapping
-        Documento save(@RequestBody Documento documento) {
+        Documento save(@RequestBody @Validated Documento documento) {
             return documentoService.save(documento);
         }
 

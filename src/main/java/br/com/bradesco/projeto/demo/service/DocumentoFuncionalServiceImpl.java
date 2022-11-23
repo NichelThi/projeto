@@ -3,8 +3,6 @@ package br.com.bradesco.projeto.demo.service;
 import br.com.bradesco.projeto.demo.exception.AnexoNotFound;
 import br.com.bradesco.projeto.demo.domain.DocumentoFuncional;
 import br.com.bradesco.projeto.demo.repository.DocumentoFuncionalRepository;
-import br.com.bradesco.projeto.demo.repository.DocumentoRepository;
-import br.com.bradesco.projeto.demo.domain.Documento;
 import lombok.RequiredArgsConstructor;
 import org.apache.commons.collections4.IterableUtils;
 import org.springframework.stereotype.Service;

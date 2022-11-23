@@ -1,36 +1,28 @@
 package br.com.bradesco.projeto.demo.domain;
 
-
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.util.Date;
-import java.util.List;
+
 
 @Entity
 @Table
 public class Documento {
 
 
-
-    @ManyToMany(mappedBy = "documento")
-    @JsonIgnoreProperties("documento")
-    private List<DocumentoFuncional> documentoFuncional;// ajustar nao faz sentido
     @Id
     private Long id;
+    @NotBlank(message = "Anexo obrigatório.")
     private String anexo;
+    @NotBlank(message = "Nome obrigatório.")
     private String nome;
+    @NotBlank(message = "Tipo documento obrigatório.")
     private String tipo;
+    @NotNull(message = "Data do documento obrigatória.")
     private Date data_documento;
+    @NotNull(message = "Data do cadastro obrigatória.")
     private Date data_cadastro;
-
-    public List<DocumentoFuncional> getDocumentoFuncional() {
-        return documentoFuncional;
-    }
-
-    public void setDocumentoFuncional(List<DocumentoFuncional> documentoFuncional) {
-        this.documentoFuncional = documentoFuncional;
-    }
 
     public Long getId() {
         return id;

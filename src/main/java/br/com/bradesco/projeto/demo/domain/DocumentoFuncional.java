@@ -1,6 +1,5 @@
 package br.com.bradesco.projeto.demo.domain;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -46,14 +45,6 @@ public class DocumentoFuncional {
     public void setData_descarte(Date data_descarte) {
         this.data_descarte = data_descarte;
     }
-
-    /*public String getFuncionario() {
-        return funcionario;
-    }
-
-    public void setFuncionario(String funcionario) {
-        this.funcionario = funcionario;
-    }*/
 
 
     public List<Documento> getDocumento() {
