@@ -21,7 +21,7 @@ public class Documento {
     private String tipo;
     @NotNull(message = "Data do documento obrigatória.")
     private Date data_documento;
-    @NotNull(message = "Data do cadastro obrigatória.")
+    @NotNull(message = "Data de cadastramento obrigatória.")
     private Date data_cadastro;
 
     public Long getId() {
