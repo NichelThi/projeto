@@ -1,0 +1,52 @@
+Projeto
+
+Modelo atual:
+Documentos são entregues via original impressos e assinados (quando necessário), gestor realiza a
+guarda da documentação conforme normativo (no AOC equipe funcionalismo realiza a guarda em
+pasta funcional).
+
+
+Principais Documentos:
+- Folha ponto
+- Atestados e declarações de ausência
+- Comunicação de férias
+- Comprovante Creche / Babá
+- Documentação demissional e homologação (quando feito no departamento)
+- Exames ocupacionais
+- CAT
+- Documentos de licença INSS
+- Formulários de alteração cadastral
+
+
+Principais problemas:
+O Banco assume a responsabilidade pela guarda de documentos que o funcionário pode precisar,
+exemplo os atestados originais no caso de uma licença INSS.
+Risco de extravio tanto no processo de guarda quanto em eventual transferência do funcionário para
+outro departamento, onde a pasta funcional deve ser enviada ao novo departamento via malote.
+O gestor precisa ter um sistema de controle para descarte dos documentos após o prazo
+prescricional de cada documento (pode variar de 3 a 11 anos).
+Processo para as áreas interessadas acessarem os documentos, exemplo:
+1 – Quando um funcionário tem mais de 15 dias de atestado pelo mesmo CID ou CIT correlacionado
+dentro de um período de 60 dias, o mesmo deve ser encaminhado para licença INSS, neste caso o
+gestor precisa ter um controle dos atestados para identificar estes casos, digitalizar os atestados,
+encaminhar para licenças que irá analisar os documentos e sinalizar se os atestados são
+correlacionados e informar os procedimentos para licença.
+Em caso de ação trabalhista, o jurídico solicita ao departamento a documentação da pasta funcional,
+gestor digitaliza os documentos, encaminha via e-mail para o jurídico e este encaminha via e-mail
+para o escritório terceiro que irá representar o banco.
+
+
+Proposta:
+Sistema onde o próprio funcionário inclua seus documentos digitalizados (digitalização ou foto), de
+forma simples. Informa seu código funcional, tipo de documento e anexa a imagem. Gestor valida a
+adequação do anexo e aprova.
+Em caso de atestado, onde o funcionário estará afastado por tempo prolongado o gestor pode fazer
+a inclusão também.
+No caso de atestado o sistema pode pedir a informação de CID, Data início e data Fim do atestado.
+Funcionalidades do sistema:
+O sistema já pode fazer um controle de quantidade de dias de atestado e sinalizar ao gestor sempre
+que houver mais de 15 dias dentro de um período de 60 dias.
+Gestor, Jurídico e equipe Licenças podem ter acesso a documentação de forma online, pesquisar por
+código funcional ou nome.
+O sistema pode ser parametrizado para descartar os documentos de acordo com o prazo
+prescricional de cada tipo de documentação.
