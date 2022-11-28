@@ -33,7 +33,7 @@ public class HandlerException {
                 .build();
         return apiError;
     }
-    @ExceptionHandler({DocumentoIncompleto.class})
+    /*@ExceptionHandler({DocumentoIncompleto.class})
     @ResponseStatus(HttpStatus.NOT_FOUND)
     public APIError documentoIncompleto(Exception exception) {
         APIError apiError = APIError.builder()
@@ -41,7 +41,7 @@ public class HandlerException {
                 .code("Documento incompleto")
                 .build();
         return apiError;
-    }
+    }*/
 
     @ExceptionHandler({MethodArgumentNotValidException.class})
     @ResponseStatus(HttpStatus.BAD_REQUEST)
