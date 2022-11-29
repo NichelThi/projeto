@@ -11,6 +11,7 @@ import java.util.Date;
 public class Documento {
 
 
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Id
     private Long id;
     @NotBlank(message = "Anexo obrigatório.")

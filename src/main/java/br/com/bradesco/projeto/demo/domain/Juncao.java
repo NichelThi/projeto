@@ -10,6 +10,7 @@ import java.util.List;
 @Entity
 public class Juncao {
 
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Id
     private Long id;
     private String nome;

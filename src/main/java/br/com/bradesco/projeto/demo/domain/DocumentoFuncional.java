@@ -9,6 +9,7 @@ import java.util.List;
 @Table
 public class DocumentoFuncional {
 
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Id
     private Long id;
     private String tipo;

@@ -7,6 +7,7 @@ import javax.persistence.*;
 @Entity
 public class Funcionario {
 
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Id
     private Long funcional;
     private String nome;

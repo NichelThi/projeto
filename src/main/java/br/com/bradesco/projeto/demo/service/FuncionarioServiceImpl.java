@@ -21,7 +21,7 @@ public class FuncionarioServiceImpl  implements FuncionarioService{
     private final SecaoRepository secaoRepository;
     private List<Funcionario> list = new ArrayList<>();
 
-    @Override
+   @Override
     public List<Funcionario> list() {
         return IterableUtils.toList(funcionarioRepository.findAll());
     }
