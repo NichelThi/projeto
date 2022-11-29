@@ -1,5 +1,7 @@
 package br.com.bradesco.projeto.demo.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 
 
@@ -13,6 +15,7 @@ public class Funcionario {
     private String nome;
 
     @ManyToOne
+    @JsonIgnoreProperties("funcionario")
     private Secao secao;
 
 

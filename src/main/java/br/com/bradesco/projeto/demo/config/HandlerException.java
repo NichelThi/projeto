@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 @RestControllerAdvice
 public class HandlerException {
 
-    @ExceptionHandler({AnexoNotFound.class})
+  /*  @ExceptionHandler({AnexoNotFound.class})
     @ResponseStatus(HttpStatus.NOT_FOUND)
     public APIError anexoNotFound(Exception exception) {
         APIError apiError = APIError.builder()
@@ -23,7 +23,7 @@ public class HandlerException {
                 .code("Arquivo nao anexado")
                 .build();
         return apiError;
-    }
+    }*/
     @ExceptionHandler({FuncionarioIncompleto.class})
     @ResponseStatus(HttpStatus.NOT_FOUND)
     public APIError funcionarioIncompleto(Exception exception) {

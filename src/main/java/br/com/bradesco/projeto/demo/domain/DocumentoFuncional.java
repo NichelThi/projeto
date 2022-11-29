@@ -1,6 +1,9 @@
 package br.com.bradesco.projeto.demo.domain;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.databind.annotation.JsonAppend;
+
 import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
@@ -15,8 +18,11 @@ public class DocumentoFuncional {
     private String tipo;
     private Date data_descarte;
 
-    @OneToOne(cascade = CascadeType.PERSIST)
+    @JsonIgnoreProperties("secao")
+    @OneToOne
     private Funcionario funcionario;
+
+
 
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinColumn(name = "documento_id")
@@ -54,6 +60,15 @@ public class DocumentoFuncional {
 
     public void setDocumento(List <Documento> documento) {
         this.documento = documento;
+    }
+
+
+    public Funcionario getFuncionario() {
+        return funcionario;
+    }
+
+    public void setFuncionario(Funcionario funcionario) {
+        this.funcionario = funcionario;
     }
 
 }
