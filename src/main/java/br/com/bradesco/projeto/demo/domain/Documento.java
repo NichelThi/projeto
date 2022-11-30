@@ -14,8 +14,8 @@ public class Documento {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Id
     private Long id;
-    @NotBlank(message = "Anexo obrigatório.")
-    private String anexo;
+    @OneToOne
+    private File anexo;
     @NotBlank(message = "Nome obrigatório.")
     private String nome;
     @NotBlank(message = "Tipo documento obrigatório.")
@@ -33,11 +33,11 @@ public class Documento {
         this.id = id;
     }
 
-    public String getAnexo() {
+    public File getAnexo() {
         return anexo;
     }
 
-    public void setAnexo(String anexo) {
+    public void setAnexo(File anexo) {
         this.anexo = anexo;
     }
 
