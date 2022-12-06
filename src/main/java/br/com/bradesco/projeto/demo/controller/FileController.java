@@ -28,11 +28,11 @@ public class FileController {
                 .name(newFile.getName())
                 .type(newFile.getType())
                 .size(newFile.getData().length)
-                .url("/documentos/" + newFile.getId() + "/downloads")
+                .url("/documentos/" + newFile.getId() + "/download")
                 .build();
     }
 
- /*  @GetMapping("{id}/download")
+ @GetMapping("/download")
     public ResponseEntity<byte[]> getFile(@PathVariable Long id) {
         File file = fileService.getById(id);
         return ResponseEntity.ok()
@@ -41,7 +41,7 @@ public class FileController {
     }
 
 
-    @GetMapping
+  /* @GetMapping
     @ResponseBody
     public List<FileDTO> listAll() {
         return fileService.listAll().stream().map(file -> FileDTO.builder()
